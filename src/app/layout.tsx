@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Blinker } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
 
 const blinker = Blinker({ subsets: ['latin'], weight: ['400', '600'] })
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={blinker.className}>{children}</body>
+      <body className={blinker.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
