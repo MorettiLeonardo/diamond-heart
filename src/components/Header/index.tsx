@@ -11,7 +11,9 @@ import Link from 'next/link'
 
 const Header = () => (
   <HeaderContainer>
-    <Image src={logo} alt="Diamonds Heart" />
+    <Link href={'/'}>
+      <Image src={logo} alt="Diamonds Heart" />
+    </Link>
     <Navbar>
       <Link href={'/'}>Categorias</Link>
       <Link href={'/'}>Perfil</Link>
